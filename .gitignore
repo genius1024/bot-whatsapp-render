@@ -1,0 +1,4 @@
+AppData/ 
+.docker/ 
+node_modules/ 
+__pycache__/ 
