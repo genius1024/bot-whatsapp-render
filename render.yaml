@@ -1,0 +1,12 @@
+services:
+  - name: bot-whatsapp
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: ACCESS_TOKEN_META
+        sync: false
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: PHONE_NUMBER_ID
+        sync: false
