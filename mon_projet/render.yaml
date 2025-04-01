@@ -1,0 +1,10 @@
+services:
+  - name: bot-whatsapp  # Nom de ton service
+    type: web  # Type de service (web)
+    env: python  # Environnement Python
+    buildCommand: pip install -r requirements.txt  # Installation des dépendances
+    startCommand: rasa run --enable-api --cors "*" --debug & python webhook.py
+    plan: free  # Plan gratuit sur Render
+    envVars:
+      - key: PORT
+        value: 5005
